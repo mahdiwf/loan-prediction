@@ -12,27 +12,25 @@ Questions:
 3). The higher the credit limit the more likely to default
 
 # Annotations & Sample Outputs
+
 Features with outliers
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/ce916150-8a65-4b75-983d-966b831ebb57)
+
 After transform
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/6c458a16-babb-4159-af69-5f8d667d4d3a)
+
 Algorithm Comparison
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/323e2466-590d-4be6-a1e4-7d0058fff21a)
 
 Classification Report
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00     10414
-           1       1.00      1.00      1.00     10920
-
-    accuracy                           1.00     21334
-   macro avg       1.00      1.00      1.00     21334
-weighted avg       1.00      1.00      1.00     21334
+![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/b22fad73-04b7-4176-b3cd-0ac1fa666073)
 
 Confusion Matrix
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/031f737c-a2e1-42e9-91fc-bbad9210db3e)
+
 Feature Importances
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/086c0ae4-7931-4876-85b9-1f921bd85278)
+
 Partial Dependency Display
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/f69cbc13-5f54-4879-a4f9-2811ddc5c7ca)
 
