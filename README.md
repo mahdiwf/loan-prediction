@@ -7,9 +7,9 @@ To predict whether a loan will be default or not
  5) Discuss three questions/hypothesis given in the class
 
 Questions:
- 1) The higher the installment the more likely to default
+ 1) The higher the installment the more likely to default?
  2) Individual vs Join application (application_type), which one is more likely to default?
- 3) The higher the credit limit the more likely to default
+ 3) The higher the credit limit the more likely to default?
 
 # Annotations & Sample Outputs
 Features with outliers
