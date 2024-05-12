@@ -35,6 +35,6 @@ Partial Dependency Display
 
 To answer the questions/hypothesis asked in the assignment:
 Partial dependence plots show how each variable or predictor affects the model's predictions.
- 1). The higher the installment, the more likely the customer will not able to fully pay. This makes sense, but to be more contextual probably we could analize the data more details such as comparing with the income.
- 2). Join application seems more likely to default. Perhaps, they are unfortunately separated/divorced? or they pass the responsibility to each other?
- 3). High credit customer more likely to default. Again, we need to check more data to conclude, but probably higher credit limit will loan higher amount, resulted for them not able to pay.
+ 1) The higher the installment, the more likely the customer will not able to fully pay. This makes sense, but to be more contextual probably we could analize the data more details such as comparing with the income.
+ 2) Join application seems more likely to default. Perhaps, they are unfortunately separated/divorced? or they pass the responsibility to each other?
+ 3) High credit customer more likely to default. Again, we need to check more data to conclude, but probably higher credit limit will loan higher amount, resulted for them not able to pay.
