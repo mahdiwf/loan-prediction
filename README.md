@@ -5,6 +5,7 @@ To predict whether a loan will be default or not
  3) Compare ensemble methods
  4) Discuss classification report
  5) Discuss three questions/hypothesis given in the class
+
 Questions:
 1). The higher the installment the more likely to default
 2). Individual vs Join application (application_type), which one is more likely to default?
@@ -17,6 +18,7 @@ After transform
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/6c458a16-babb-4159-af69-5f8d667d4d3a)
 Algorithm Comparison
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/323e2466-590d-4be6-a1e4-7d0058fff21a)
+
 Classification Report
               precision    recall  f1-score   support
 
@@ -26,12 +28,14 @@ Classification Report
     accuracy                           1.00     21334
    macro avg       1.00      1.00      1.00     21334
 weighted avg       1.00      1.00      1.00     21334
+
 Confusion Matrix
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/031f737c-a2e1-42e9-91fc-bbad9210db3e)
 Feature Importances
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/086c0ae4-7931-4876-85b9-1f921bd85278)
 Partial Dependency Display
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/f69cbc13-5f54-4879-a4f9-2811ddc5c7ca)
+
 To answer the questions/hypothesis asked in the assignment:
 Partial dependence plots show how each variable or predictor affects the model's predictions.
 1). The higher the installment, the more likely the customer will not able to fully pay. This makes sense, but to be more contextual probably we could analize the data more details such as comparing with the income.
