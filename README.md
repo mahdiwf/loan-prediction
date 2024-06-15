@@ -1,15 +1,16 @@
 # Loan Prediction
-To predict whether a loan will be default or not
- 1) EDA with y-data profiling
- 2) Handling imbalanced data
- 3) Compare ensemble methods
- 4) Discuss classification report
- 5) Discuss three questions/hypothesis given in the class
+Using classifications machine learning to predict whether a loan will default or not. 
+In this project, I performed the following:
+1) EDA with y-data profiling
+2) Handling imbalanced data
+3) Compare ensemble methods
+4) Discuss classification report
+5) Discuss three questions/hypotheses given in the class
 
 Questions:
- 1) The higher the installment the more likely to default?
- 2) Individual vs Join application (application_type), which one is more likely to default?
- 3) The higher the credit limit the more likely to default?
+1) The higher the installment, the more likely the default.
+2) Individual or Join application (application_type), which one is more likely to default?
+3) The higher the credit limit, the more likely the default.
 
 # Annotations & Sample Outputs
 
@@ -42,6 +43,11 @@ Partial Dependency Display
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/f69cbc13-5f54-4879-a4f9-2811ddc5c7ca)
 
 To answer the questions/hypothesis asked in the assignment:
+Partial dependence plots show how each variable or predictor affects the model's predictions.
+1) The higher the installment, the more likely the customer will not pay. It seems to make sense, but we could analyze the data deeper by comparing the installment with the income. We will have a better context.
+2) The join applications seem more likely to default. Are they unfortunately separated/divorced after the application? Do they pass the responsibility to each other?
+3) High-credit customers are more likely to default. A higher credit limit will likely loan a higher amount. This makes them not being able to pay.
+   
 Partial dependence plots show how each variable or predictor affects the model's predictions.
  1) The higher the installment, the more likely the customer will not able to fully pay. This makes sense, but to be more contextual probably we could analize the data more details such as comparing with the income.
  2) Join application seems more likely to default. Perhaps, they are unfortunately separated/divorced? or they pass the responsibility to each other?
