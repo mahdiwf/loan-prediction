@@ -32,6 +32,8 @@ Features with outliers (before transform)
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/ce916150-8a65-4b75-983d-966b831ebb57)
 
+ While most valules are near zero, Some values/outliers as high as multiply of 1000000 (1e6).
+
 Features with outliers (after transform)
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/6c458a16-babb-4159-af69-5f8d667d4d3a)
