@@ -83,4 +83,11 @@ Partial dependence plots show how each variable or predictor affects the model's
 1) The higher the installment, the more likely the customer will not pay. It seems to make sense, but we could analyze the data deeper by comparing the installment with the income. We will have a better context.
 2) The join applications seem more likely to default. Are they unfortunately separated/divorced after the application? Do they pass the responsibility to each other? Some reasons I can think of.
 3) High-credit customers are more likely to default. A higher credit limit will likely loan a higher amount. This makes them not being able to pay.
-   
+
+References:<br>
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html <br>
+https://www.tutorialspoint.com/compute-classification-report-and-confusion-matrics-in-python <br>
+https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html <br>
+https://www.quora.com/In-classification-how-do-you-handle-an-unbalanced-training-set/answers/1144228?srid=h3G6o <br>
+https://dev.to/thalesbruno/subplotting-with-matplotlib-and-seaborn-5ei8 <br>
+https://www.kaggle.com/code/dansbecker/partial-dependence-plots <br>
