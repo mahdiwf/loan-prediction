@@ -14,13 +14,33 @@ Questions/hypothesis:
 
 # Annotations & Sample Outputs
 
-Features with outliers
+Processing data with y-data profiling
+![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/0ee395cf-7d5f-4d8d-8d03-6a88d1fc06d7) <br>
+
+y-data profiling produced a profile report in HTML with a size of about 600,000 KB. It is a very big report, through and details!. After reviewing these reports, I proceeded with the following steps.
+ * remove columns (such as too many missing values, etc)
+ * combine columns/create new features and remove old ones
+ * remove columns having low/zero correlation with the target
+
+Finding & transform outliers<br>
+Features with outliers (before transform)
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/ce916150-8a65-4b75-983d-966b831ebb57)
 
-After transform
+Features with outliers (after transform)
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/6c458a16-babb-4159-af69-5f8d667d4d3a)
+
+Handling Imbalance Data
+
+![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/24d0ea04-b17d-4ddd-9b38-c32632f4e0c3) <br>
+
+I use ADASYN to handle this imbalanced data. ADASYN is adaptive. Instead of all the samples being linearly interpolated (such as SMOTE), it adds random small values to the points, making it more realistic.<br>
+After ADASYH
+
+![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/fc1d4dc0-f07e-43ac-b1ca-6c6a6d78b720)
+
+
 
 Algorithm Comparison
 
