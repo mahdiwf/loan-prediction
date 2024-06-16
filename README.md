@@ -36,7 +36,8 @@ Handling Imbalance Data
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/24d0ea04-b17d-4ddd-9b38-c32632f4e0c3) <br>
 
 I use ADASYN to handle this imbalanced data. ADASYN is adaptive. Instead of all the samples being linearly interpolated (such as SMOTE), it adds random small values to the points, making it more realistic.<br>
-After ADASYH
+
+After ADASYN
 
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/fc1d4dc0-f07e-43ac-b1ca-6c6a6d78b720)
 
@@ -46,17 +47,32 @@ Algorithm Comparison
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/323e2466-590d-4be6-a1e4-7d0058fff21a)
 
+From this result, Random Forest performed better than Ada Boost & Gradient Boosting Method.
+
 Classification Report
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/b22fad73-04b7-4176-b3cd-0ac1fa666073)
+
+Wow, the classification report shows a perfect score. In theory, this model predicts with almost 100% accuracy! I am sure some form of overfitting may existed.
+In the next project, I will prepare unseen data from the dataset to run the model to see how much overfitting occurs.
 
 Confusion Matrix
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/031f737c-a2e1-42e9-91fc-bbad9210db3e)
 
+Since I want to identify the likelihood of being charged off, the Positive class is 'charged off,' and the negative class is 'fully paid.'
+* False Positive = 0 vs. True Positive= 10906. 
+The model has zero mistakes in identifying the charged-off. It doesn't identify any 'fully paid' as 'charged off.'
+* False Negative= 14 vs. True Negative= 10414. 
+However, the model has missed 'charged off' in small numbers.
+
+Again, in theory, this is a good result.
+
 Feature Importances
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/086c0ae4-7931-4876-85b9-1f921bd85278)
+
+This shows the 10 most important factors for this prediction. Some of these features intuitively tell us that it is a major factor such as the last payment amount, installment size, and loan amount.
 
 Partial Dependency Display
 
