@@ -14,6 +14,11 @@ Questions/hypothesis:
 
 # Annotations & Sample Outputs
 
+Data Size <br>
+![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/c555ed3c-d16f-44ca-934b-6e7fcc43ed32)
+
+It consists 66388 rows & 150 columns. Because of the size, I will use y-data profiling for exploratory data analysis.
+
 Processing data with y-data profiling
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/0ee395cf-7d5f-4d8d-8d03-6a88d1fc06d7) <br>
 
@@ -40,7 +45,6 @@ I use ADASYN to handle this imbalanced data. ADASYN is adaptive. Instead of all 
 After ADASYN
 
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/fc1d4dc0-f07e-43ac-b1ca-6c6a6d78b720)
-
 
 
 Algorithm Comparison
