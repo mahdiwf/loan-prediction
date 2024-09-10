@@ -1,6 +1,6 @@
 # Loan Prediction
-Using classifications machine learning to predict whether a loan will default or not. 
-In this project, I performed the following:
+This project is modified from Data Science class group project assignment. This project will be using classifications machine learning to predict whether a loan will default or not. 
+This is an introductory project in data science. However, we will use big volume data and y-data profiling for data analysis:
 1) EDA with y-data profiling
 2) Handling imbalanced data
 3) Compare ensemble methods
@@ -17,32 +17,37 @@ Questions/hypothesis:
 Data Size <br>
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/c555ed3c-d16f-44ca-934b-6e7fcc43ed32)
 
-It consists 66388 rows & 150 columns. Because of the size, I will use y-data profiling for exploratory data analysis.
+It consists 66388 rows & 150 columns. Because of the size, we use y-data profiling for exploratory data analysis.
 
 Processing data with y-data profiling
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/0ee395cf-7d5f-4d8d-8d03-6a88d1fc06d7) <br>
 
-y-data profiling produced a profile report in HTML with a size of about 600,000 KB. It is a very big report, through and details!. After reviewing these reports, I proceeded with the following steps.
+y-data profiling produced a profile report in HTML with a size of about 600,000 KB. It is a very big report, through and details!. After reviewing these reports, we proceeded with the following steps.
  * remove columns (such as too many missing values, etc)
- * combine columns/create new features and remove old ones
+ * combine columns/create new features and remove old ones (feature engineering)
  * remove columns having low/zero correlation with the target
+
+Now, let's assume we have a clean data after EDA above. However, there are still two problems with this data that has not been addressed in the above steps: outliers & imbalance data.
 
 Finding & transform outliers<br>
 Features with outliers (before transform)
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/ce916150-8a65-4b75-983d-966b831ebb57)
 
- While most valules are near zero, Some values/outliers as high as multiply of 1000000 (1e6).
+ While most valules are near zero, Some values/outliers as high as multiply of 1000000 (1e6). Outliers can significantly impact machine learning models, skewing data and leading to inaccurate predictions.
+ Therefore, we will transform these values.
 
 Features with outliers (after transform)
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/6c458a16-babb-4159-af69-5f8d667d4d3a)
 
+Now, as the outliers have been transformed, we will handle the next problem.<br>
+
 Handling Imbalance Data
 
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/24d0ea04-b17d-4ddd-9b38-c32632f4e0c3) <br>
 
-I use ADASYN to handle this imbalanced data. ADASYN is adaptive. Instead of all the samples being linearly interpolated (such as SMOTE), it adds random small values to the points, making it more realistic.<br>
+We use ADASYN to handle this imbalanced data. ADASYN is adaptive (GMAT is adaptive too!). Instead of all the samples being linearly interpolated (such as SMOTE), it adds random small values to the points, making it more realistic.<br>
 
 After ADASYN
 
@@ -53,24 +58,24 @@ Algorithm Comparison
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/323e2466-590d-4be6-a1e4-7d0058fff21a)
 
-From this result, Random Forest performed better than Ada Boost & Gradient Boosting Method.
+From this result, Random Forest (RF) performed better than Ada Boost & Gradient Boosting Method.
 
 Classification Report
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/b22fad73-04b7-4176-b3cd-0ac1fa666073)
 
 Wow, the classification report shows a perfect score. In theory, this model predicts with almost 100% accuracy! I am sure some form of overfitting may existed.
-In the next project, I will prepare unseen data from the dataset to run the model to see how much overfitting occurs.
+In the future/next project, I will prepare unseen data from the dataset to run the model to see how much overfitting occurs.
 
 Confusion Matrix
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/031f737c-a2e1-42e9-91fc-bbad9210db3e)
 
-Since I want to identify the likelihood of being charged off, the Positive class is 'charged off,' and the negative class is 'fully paid.'
+Since I want to identify the likelihood of being charged off (bad loan), the Positive class is 'charged off,' and the negative class is 'fully paid.'
 * False Positive = 0 vs. True Positive= 10906. 
 The model has zero mistakes in identifying the charged-off. It doesn't identify any 'fully paid' as 'charged off.'
 * False Negative= 14 vs. True Negative= 10414. 
-However, the model has missed 'charged off' in small numbers.
+Here, the model has missed 'fully paid' by identifying them as 'charged off', but there are only small number (14) compared with the total accounts (10428).
 
 Again, in theory, this is a good result.
 
