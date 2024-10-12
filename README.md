@@ -27,7 +27,7 @@ y-data profiling produced a profile report in HTML with a size of about 600,000 
  * combine columns/create new features and remove old ones (feature engineering)
  * remove columns having low/zero correlation with the target
 
-Now, let's assume we have a clean data after EDA above. However, there are still two problems with this data that has not been addressed in the above steps: outliers & imbalance data.
+Now, we have a clean data after EDA above. However, there are still two problems with this data that has not been addressed in the above steps: outliers & imbalance data.
 
 Finding & transform outliers<br>
 Features with outliers (before transform)
@@ -35,7 +35,7 @@ Features with outliers (before transform)
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/ce916150-8a65-4b75-983d-966b831ebb57)
 
  While most valules are near zero, Some values/outliers as high as multiply of 1000000 (1e6). Outliers can significantly impact machine learning models, skewing data and leading to inaccurate predictions.
- Therefore, we will transform these values.
+ Therefore, we will transform these values using numpy logaritmic function, np.log().
 
 Features with outliers (after transform)
 
