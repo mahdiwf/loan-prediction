@@ -1,6 +1,6 @@
 # Loan Prediction
 This project is modified from Data Science class group project assignment. This project will be using classifications machine learning to predict whether a loan will default or not. 
-This is an introductory project in data science. However, we will use big volume data and y-data profiling for data analysis:
+We will use big volume of data and y-data profiling (earlier version, latest: https://docs.profiling.ydata.ai/latest/) for data analysis:
 1) EDA with y-data profiling
 2) Handling imbalanced data
 3) Compare ensemble methods
@@ -9,7 +9,7 @@ This is an introductory project in data science. However, we will use big volume
 
 Questions/hypothesis:
 1) The higher the installment, the more likely the default.
-2) Individual or Join application (application_type), which one is more likely to default?
+2) Between individual or join application (application_type), join application is more likely to default.
 3) The higher the credit limit, the more likely the default.
 
 # Annotations & Sample Outputs
@@ -17,7 +17,7 @@ Questions/hypothesis:
 Data Size <br>
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/c555ed3c-d16f-44ca-934b-6e7fcc43ed32)
 
-It consists 66388 rows & 150 columns. Because of the size, we use y-data profiling for exploratory data analysis.
+It consists 66388 rows & 150 columns. Because of this huge size, we use **y-data profiling** for exploratory data analysis.
 
 Processing data with y-data profiling
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/0ee395cf-7d5f-4d8d-8d03-6a88d1fc06d7) <br>
@@ -35,7 +35,7 @@ Features with outliers (before transform)
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/ce916150-8a65-4b75-983d-966b831ebb57)
 
  While most valules are near zero, Some values/outliers as high as multiply of 1000000 (1e6). Outliers can significantly impact machine learning models, skewing data and leading to inaccurate predictions.
- Therefore, we will transform these values using numpy logaritmic function, np.log().
+ Therefore, we will transform these values using Numpy's logaritmic function, np.log().
 
 Features with outliers (after transform)
 
@@ -91,9 +91,9 @@ Partial Dependency Display
 
 To answer the questions/hypothesis asked in the assignment:
 Partial dependence plots show how each variable or predictor affects the model's predictions.
-1) The higher the installment, the more likely the customer will not pay. It seems to make sense, but we could analyze the data deeper by comparing the installment with the income. We will have a better context.
+1) The higher the installment, the more likely the customer will not pay. It seems to make sense, but we could analyze the data deeper by comparing the installment with the income, so that we will have a better context.
 2) The join applications seem more likely to default. Are they unfortunately separated/divorced after the application? Do they pass the responsibility to each other? Some reasons I can think of.
-3) High-credit customers are more likely to default. A higher credit limit will likely loan a higher amount. This makes them not being able to pay.
+3) High-credit customers are more likely to default. A higher credit limit will likely loan a higher amount. I think this high credit makes them not being able to pay.
 
 References:<br>
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html <br>
