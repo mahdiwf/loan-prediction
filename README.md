@@ -27,7 +27,9 @@ y-data profiling produced a profile report in HTML with a size of about 600,000 
  * combine columns/create new features and remove old ones (feature engineering)
  * remove columns having low/zero correlation with the target
 
-Now, we have a clean data after EDA above. However, there are still two problems with this data that has not been addressed in the above steps: outliers & imbalance data.
+Data Size after the above steps.<br>
+![image](https://github.com/user-attachments/assets/fe59832b-19ea-47f5-9d21-0ecaf5636ce6) <br>
+We reduced the column from 150 to 96 (reduced by 36%) and we have a cleaner data. However, there are still two problems with this data that has not been addressed in the above steps: outliers & imbalance data.
 
 Finding & transform outliers<br>
 Features with outliers (before transform)
@@ -47,7 +49,7 @@ Handling Imbalance Data
 
 ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/24d0ea04-b17d-4ddd-9b38-c32632f4e0c3) <br>
 
-We use ADASYN to handle this imbalanced data. ADASYN is adaptive (GMAT is adaptive too!). Instead of all the samples being linearly interpolated (such as SMOTE), it adds random small values to the points, making it more realistic.<br>
+We use ADASYN to handle this imbalanced data. ADASYN is adaptive. Instead of all the samples being linearly interpolated (such as SMOTE), it adds random small values to the points, making it more realistic.<br>
 
 After ADASYN
 
@@ -73,7 +75,7 @@ Confusion Matrix
 
 Since I want to identify the likelihood of being charged off (bad loan), the Positive class is 'charged off,' and the negative class is 'fully paid.'
 * False Positive = 0 vs. True Positive= 10906. 
-The model has zero mistakes in identifying the charged-off. It doesn't identify any 'fully paid' as 'charged off.'
+The model has zero mistakes in identifying the charged-off, i.e., it doesn't identify any 'fully paid' as 'charged off.'
 * False Negative= 14 vs. True Negative= 10414. 
 Here, the model has missed 'fully paid' by identifying them as 'charged off', but there are only small number (14) compared with the total accounts (10428).
 
@@ -85,11 +87,11 @@ Feature Importances
 
 This shows the 10 most important factors for this prediction. Some of these features intuitively tell us that it is a major factor such as the last payment amount, installment size, and loan amount.
 
-Partial Dependency Display
+Partial Dependency Display <br>
+The following plots are selected to answer the questions/hypothesis asked in the assignment.
 
  ![image](https://github.com/mahdiwf/loan-prediction/assets/163992115/f69cbc13-5f54-4879-a4f9-2811ddc5c7ca)
 
-To answer the questions/hypothesis asked in the assignment:
 Partial dependence plots show how each variable or predictor affects the model's predictions.
 1) The higher the installment, the more likely the customer will not pay. It seems to make sense, but we could analyze the data deeper by comparing the installment with the income, so that we will have a better context.
 2) The join applications seem more likely to default. Are they unfortunately separated/divorced after the application? Do they pass the responsibility to each other? Some reasons I can think of.
